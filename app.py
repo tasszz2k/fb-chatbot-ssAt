@@ -3,8 +3,8 @@ from flask import Flask, request
 from pymessenger.bot import Bot
 
 app = Flask(__name__)       # Initializing our Flask application
-ACCESS_TOKEN = 'GENERATED_TOKEN_FROM_FACEBOOK'
-VERIFY_TOKEN = 'UNIQE_TOKEN'
+ACCESS_TOKEN = 'EAAC5ge4lsc8BAAnmdB7ZCfX1Uonv413RaaUFALUD6yrmd3nShcwLRyNu9ik4vbZCx545RkUwZCLY33CdZAuns71lFVbdgKPW2XzJ9LQ4ivH0ZAhmojSMqiavrlD6wJLr2bfrhZB5x6hIQobrzrahvQw9jGj5mlNIabZANnoFY8iJC5Q95r8HPfCgjYX53cZB3pIZD'
+VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
 bot = Bot(ACCESS_TOKEN)
 
 # Importing standard route and two requst types: GET and POST.
@@ -16,7 +16,7 @@ def receive_message():
         # that confirms all requests that your bot receives came from Facebook.
         token_sent = request.args.get("hub.verify_token")
         return verify_fb_token(token_sent)
-    # If the request was not GET, it  must be POSTand we can just proceed with sending a message
+    # If the request was not GET, it  must be POST and we can just proceed with sending a message
     # back to user
     else:
             # get whatever message a user sent the bot
@@ -61,4 +61,4 @@ def send_message(recipient_id, response):
 
 # Add description here about this if statement.
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5001)
