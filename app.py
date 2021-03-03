@@ -7,7 +7,7 @@ ACCESS_TOKEN = 'EAAC5ge4lsc8BAAnmdB7ZCfX1Uonv413RaaUFALUD6yrmd3nShcwLRyNu9ik4vbZ
 VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
 bot = Bot(ACCESS_TOKEN)
 
-# Importing standard route and two requst types: GET and POST.
+# Importing standard route and two request types: GET and POST.
 # We will receive messages that Facebook sends our bot at this endpoint
 @app.route('/', methods=['GET', 'POST'])
 def receive_message():
@@ -48,7 +48,8 @@ def verify_fb_token(token_sent):
 def get_message():
     sample_responses = ["You are stunning!", "We're proud of you",
                         "Keep on being you!", "We're greatful to know you :)",
-                        "Hế lô bạn"]
+                        "Hế lô bạn",
+                        "https://www.google.com/search?q=github&oq=github+&aqs=chrome..69i57j0i131i433j69i60l4j69i65j69i60.3527j0j7&sourceid=chrome&ie=UTF-8"]
     # return selected item to the user
     return random.choice(sample_responses)
 
