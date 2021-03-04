@@ -1,7 +1,3 @@
-import app
-from config.Util import Util
-
-
 class User:
     id = 0
     name = ''

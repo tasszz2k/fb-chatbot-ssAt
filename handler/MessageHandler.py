@@ -1,10 +1,6 @@
 from datetime import datetime
-import random
-from flask import Flask, request
-from pymessenger.bot import Bot
 
-from app import ACCESS_TOKEN, app, bot
-from config.Util import Util
+
 
 class MessageHandler:
 
@@ -12,11 +8,11 @@ class MessageHandler:
         name = user["first_name"]
         gender = user["gender"]
         now = datetime.now()
-        response_text = ""
-        hello_str = "Em chào {} {} ạ, em là ssAt -  đệ anh Tuấn Anh!\n^^"
+        response_text = "hello"
+        hello_str = "Chào {} {} ạ, em là ssAt -  đệ anh Tuấn Anh!\n^^"
 
         # check gender
-        if (gender == 'male'):
+        if gender == 'male':
             # gender is male
             response_text = hello_str.format("anh", name)
         else:

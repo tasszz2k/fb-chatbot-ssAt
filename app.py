@@ -1,6 +1,6 @@
-import random
 from flask import Flask, request
 from pymessenger.bot import Bot
+
 from config.Util import Util
 from handler.MessageHandler import MessageHandler
 

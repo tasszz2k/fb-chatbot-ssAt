@@ -1,8 +1,9 @@
-import random
 import requests
 import json
-from flask import Flask, request
-from pymessenger.bot import Bot
+import json
+
+import requests
+
 
 class Util:
     def send_get_request(url, params={}):
