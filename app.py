@@ -1,10 +1,10 @@
 import random
-import requests
 from flask import Flask, request
 from pymessenger.bot import Bot
+from config.Util import Util
 
 app = Flask(__name__)  # Initializing our Flask application
-ACCESS_TOKEN = 'EAAC5ge4lsc8BAChVFbAo3xWt6IvrtrVSGUtCd7k4jQ6ULJs8DzrTYikBYpDR62LsoOozCxJJdDPqn0qhY9rARsiRpwGrtWA2muC0XQSUur5anuBzG5vZCiTLYcPhJvECQnRcrBXDJGtxyvcsK7ZCZCrKPoeXZCysLyqcDcfUHapO9tCZCwgu2kRKhJ3sZBEswZD'
+ACCESS_TOKEN = open("config/access_token.txt", "r").read()
 VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
 bot = Bot(ACCESS_TOKEN)
 
@@ -23,7 +23,6 @@ def receive_message():
     # back to user
     else:
         # get whatever message a user sent the bot
-
         output = request.get_json()
         print(output)
         for event in output['entry']:
@@ -33,22 +32,16 @@ def receive_message():
                     # Facebook Messenger ID for user so we know where to send response back to
                     recipient_id = message['sender']['id']
                     # ----------------
-                    urlGetInformations = "https://graph.facebook.com/{}".format(recipient_id)
-                    print(urlGetInformations)
-                    params = {
-                        'fields': 'id,name,first_name,last_name,profile_pic,locale,timezone,gender',
-                        'access_token': {ACCESS_TOKEN}
-                    }
-                    response = sendGetRequest(urlGetInformations, params)
-                    print(response)
-                    print(response.text)
+
+                    user = Util.get_user_by_id(recipient_id, ACCESS_TOKEN)
+                    print(user)
                     # ----------------
 
                     # if user send us any message is text
                     if message['message'].get('text'):
                         # response text here
                         response_sent_text = get_message()
-                        send_message(recipient_id, response.text)
+                        send_message(recipient_id, user)
 
                     # if user send us a GIF, photo, video or any other non-text item
                     if message['message'].get('attachments'):
@@ -57,14 +50,7 @@ def receive_message():
     return "Message Processed"
 
 
-def sendGetRequest(url, params={}):
-    response = requests.get(
-        url,
-        params=params)
-    return response
-
-
-def get_message():
+def get_message(user, message_text):
     sample_responses = ["Hế lô, Tui là ssAt đệ anh #tass!\n ^^", "Hi, Tui là ssAt đệ anh #tass!\n:3"]
     # return selected item to the user
     return random.choice(sample_responses)
@@ -82,7 +68,10 @@ def verify_fb_token(token_sent):
 def send_message(recipient_id, response):
     # sends user the text message provided via input response parameter
     bot.send_text_message(recipient_id, response)
-    return "success"
+    return {
+        'status': 'success',
+        'message_response': response
+    }
 
 
 # Add description here about this if statement.
