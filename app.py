@@ -1,11 +1,13 @@
 import random
+import requests
 from flask import Flask, request
 from pymessenger.bot import Bot
 
-app = Flask(__name__)       # Initializing our Flask application
+app = Flask(__name__)  # Initializing our Flask application
 ACCESS_TOKEN = 'EAAC5ge4lsc8BAChVFbAo3xWt6IvrtrVSGUtCd7k4jQ6ULJs8DzrTYikBYpDR62LsoOozCxJJdDPqn0qhY9rARsiRpwGrtWA2muC0XQSUur5anuBzG5vZCiTLYcPhJvECQnRcrBXDJGtxyvcsK7ZCZCrKPoeXZCysLyqcDcfUHapO9tCZCwgu2kRKhJ3sZBEswZD'
 VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
 bot = Bot(ACCESS_TOKEN)
+
 
 # Importing standard route and two request types: GET and POST.
 # We will receive messages that Facebook sends our bot at this endpoint
@@ -21,6 +23,7 @@ def receive_message():
     # back to user
     else:
         # get whatever message a user sent the bot
+
         output = request.get_json()
         print(output)
         for event in output['entry']:
@@ -29,18 +32,36 @@ def receive_message():
                 if message.get('message'):
                     # Facebook Messenger ID for user so we know where to send response back to
                     recipient_id = message['sender']['id']
+                    # ----------------
+                    urlGetInformations = "https://graph.facebook.com/{}".format(recipient_id)
+                    print(urlGetInformations)
+                    params = {
+                        'fields': 'id,name,first_name,last_name,profile_pic,locale,timezone,gender',
+                        'access_token': {ACCESS_TOKEN}
+                    }
+                    response = sendGetRequest(urlGetInformations, params)
+                    print(response)
+                    print(response.text)
+                    # ----------------
 
                     # if user send us any message is text
                     if message['message'].get('text'):
                         # response text here
                         response_sent_text = get_message()
-                        send_message(recipient_id, response_sent_text)
+                        send_message(recipient_id, response.text)
 
                     # if user send us a GIF, photo, video or any other non-text item
                     if message['message'].get('attachments'):
                         response_sent_text = get_message()
                         send_message(recipient_id, response_sent_text)
     return "Message Processed"
+
+
+def sendGetRequest(url, params={}):
+    response = requests.get(
+        url,
+        params=params)
+    return response
 
 
 def get_message():
