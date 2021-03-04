@@ -3,7 +3,7 @@ from flask import Flask, request
 from pymessenger.bot import Bot
 
 app = Flask(__name__)       # Initializing our Flask application
-ACCESS_TOKEN = 'EAAC5ge4lsc8BAAnmdB7ZCfX1Uonv413RaaUFALUD6yrmd3nShcwLRyNu9ik4vbZCx545RkUwZCLY33CdZAuns71lFVbdgKPW2XzJ9LQ4ivH0ZAhmojSMqiavrlD6wJLr2bfrhZB5x6hIQobrzrahvQw9jGj5mlNIabZANnoFY8iJC5Q95r8HPfCgjYX53cZB3pIZD'
+ACCESS_TOKEN = 'EAAC5ge4lsc8BAChVFbAo3xWt6IvrtrVSGUtCd7k4jQ6ULJs8DzrTYikBYpDR62LsoOozCxJJdDPqn0qhY9rARsiRpwGrtWA2muC0XQSUur5anuBzG5vZCiTLYcPhJvECQnRcrBXDJGtxyvcsK7ZCZCrKPoeXZCysLyqcDcfUHapO9tCZCwgu2kRKhJ3sZBEswZD'
 VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
 bot = Bot(ACCESS_TOKEN)
 
@@ -16,10 +16,11 @@ def receive_message():
         # that confirms all requests that your bot receives came from Facebook.
         token_sent = request.args.get("hub.verify_token")
         return verify_fb_token(token_sent)
+
     # If the request was not GET, it  must be POST and we can just proceed with sending a message
     # back to user
     else:
-            # get whatever message a user sent the bot
+        # get whatever message a user sent the bot
         output = request.get_json()
         for event in output['entry']:
             messaging = event['messaging']
