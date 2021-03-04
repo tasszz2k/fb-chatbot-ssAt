@@ -47,10 +47,7 @@ def verify_fb_token(token_sent):
 
 
 def get_message():
-    sample_responses = ["You are stunning!", "We're proud of you",
-                        "Keep on being you!", "We're greatful to know you :)",
-                        "Hế lô bạn",
-                        "https://www.google.com/search?q=github&oq=github+&aqs=chrome..69i57j0i131i433j69i60l4j69i65j69i60.3527j0j7&sourceid=chrome&ie=UTF-8"]
+    sample_responses = ["Hế lô, Tui là ssAt đệ anh #tass!\n ^^", "Hi, Tui là ssAt đệ anh #tass!\n:3"]
     # return selected item to the user
     return random.choice(sample_responses)
 
