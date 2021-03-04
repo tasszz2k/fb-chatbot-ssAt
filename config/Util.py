@@ -19,7 +19,7 @@ class Util:
             'access_token': {access_token}
         }
         response = Util.send_get_request(url_get_informations, params)
-        print(response.text)
+        # print(response.text)
         user = json.loads(response.text)
         # print(user)
         return user
