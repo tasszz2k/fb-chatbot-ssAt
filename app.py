@@ -53,7 +53,7 @@ def receive_message():
 
 def get_message(user, message_text):
     # sample_responses = ["Hế lô, Tui là ssAt đệ anh #tass!\n ^^", "Hi, Tui là ssAt đệ anh #tass!\n:3"]
-    response_message = "Chào {}, Tui là ssAt đệ anh #tass!\n ^^".format(user.first_name)
+    response_message = "Chào {}, Tui là ssAt đệ anh #tass!\n ^^".format(user["first_name"])
     # return selected item to the user
     return random.choice(response_message)
 
