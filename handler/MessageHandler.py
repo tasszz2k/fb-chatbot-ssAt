@@ -1,15 +1,43 @@
+import random
 from datetime import datetime
+from config.Util import Util
+from unidecode import unidecode
 
 
 
 class MessageHandler:
+    # Load text from data folder
+    hello_inputs = Util.get_list_from_file("data/hello/hello_input.txt")
+    hello_outputs = Util.get_list_from_file("data/hello/hello_output.txt")
+
+    food_inputs = Util.get_list_from_file("data/food/food_input.txt")
+    food_outputs = Util.get_list_from_file("data/food/food_output.txt")
 
     def get_response_text(user, message_text):
+        message_text=unidecode(message_text)
+        response_text = "hello"
+
+        if MessageHandler.check_string_contains_an_element_of_list(message_text, MessageHandler.hello_inputs):
+            response_text = MessageHandler.handle_hello_message(user, message_text)
+
+        elif MessageHandler.check_string_contains_an_element_of_list(message_text, MessageHandler.food_inputs):
+            response_text = MessageHandler.handle_food_message(user, message_text)
+
+        print(">> response_text : " + response_text)
+        # return selected item to the user
+        return response_text
+
+    def handle_hello_message(user, message_text):
+        '''
+            - Handle Hello Message
+            @param user: User sending the message
+            @Param message_text: content of the message
+        '''
         name = user["first_name"]
         gender = user["gender"]
         now = datetime.now()
         response_text = "hello"
-        hello_str = "Chào {} {} ạ, em là ssAt -  đệ anh Tuấn Anh!\n^^"
+        hello_str = "Chào {} {}, em là ssAt - đệ anh Tuấn Anh ạ!\n^^"
 
         # check gender
         if gender == 'male':
@@ -19,8 +47,38 @@ class MessageHandler:
             # gender is female
             response_text = hello_str.format("chị", name)
 
-        # sample_responses = ["Hế lô, Tui là ssAt đệ anh #tass!\n ^^", "Hi, Tui là ssAt đệ anh #tass!\n:3"]
-        # response_text = "Chào {}, Tui là ssAt đệ anh #tass!\n ^^".format(user["first_name"])
-        print(response_text + ">>" + response_text)
-        # return selected item to the user
         return response_text
+
+    def handle_food_message(user, message_text):
+        '''
+            - Handle Food Message
+            @param user: User sending the message
+            @Param message_text: content of the message
+        '''
+        name = user["first_name"]
+        gender = user["gender"]
+        now = datetime.now()
+        response_text = "food"
+        food_str = "Bữa nay ăn {} là hợp lý {} {} ạ!\n^^"
+
+        food = random.choice(MessageHandler.food_outputs)
+
+        # check gender
+        if gender == 'male':
+            # gender is male
+            response_text = food_str.format(food, "anh", name)
+        else:
+            # gender is female
+            response_text = food_str.format(food, "chị", name)
+
+        return response_text
+
+    def check_string_contains_an_element_of_list(str, list):
+        print(any(element in str for element in list))
+        return any(element in str for element in list)
+
+    def get_all_data(self):
+        print(self.hello_inputs)
+        print(self.hello_outputs)
+        print(self.food_inputs)
+        print(self.food_outputs)

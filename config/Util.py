@@ -1,8 +1,6 @@
+import json
 import requests
-import json
-import json
 
-import requests
 
 
 class Util:
@@ -25,3 +23,7 @@ class Util:
         # print(user)
         return user
         # ----------------
+
+    def get_list_from_file(src):
+        element_list = open(src, "r").read().replace(';\n', ';').split(";")
+        return list(filter(None, element_list))

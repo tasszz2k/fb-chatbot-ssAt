@@ -46,8 +46,9 @@ def receive_message():
                     # if user send us a GIF, photo, video or any other non-text item
                     elif message['message'].get('attachments'):
                         # response text here
-                        response_text = MessageHandler.get_response_text(user, receive_message)
-                        send_message(recipient_id, response_text)
+                        print(message['message'].get('attachments'))
+                        # response_text = MessageHandler.get_response_text(user, receive_message)
+                        # send_message(recipient_id, response_text)
     return "Message Processed"
 
 
