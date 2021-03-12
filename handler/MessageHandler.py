@@ -18,7 +18,7 @@ class MessageHandler:
     quote_outputs = Util.get_list_from_file("data/quote/quote_output.txt")
 
     def get_response_text(user, message_text):
-        message_text=unidecode(message_text)
+        message_text=unidecode(message_text).lower()
         response_text = None
 
         # Hello

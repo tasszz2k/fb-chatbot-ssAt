@@ -12,7 +12,7 @@ user = {
     'gender': 'male'
 }
 
-message_text = 'cd'
+message_text = 'Hi'
 
 response_text = MessageHandler.get_response_text(user, message_text)
 print(response_text)
