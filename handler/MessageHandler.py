@@ -85,7 +85,7 @@ class MessageHandler:
     def handle_quote_message(user, message_text):
         response = Util.send_get_request("https://quotes.rest/qod?language=en")
         response_text = "Quote"
-        quote_str = "Quote of the day: {}"
+        quote_str = "Quote of the day: \"{}\""
         # print(response.text)
         data_json = json.loads(response.text)
         quotes = data_json['contents']['quotes']
@@ -103,7 +103,7 @@ class MessageHandler:
         gender = user["gender"]
         now = datetime.now()
         response_text = "None"
-        sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy  bảo thêm ạ!\n:3"
+        sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy  bảo thêm ạ!\n😢"
 
         # check gender
         if gender == 'male':
