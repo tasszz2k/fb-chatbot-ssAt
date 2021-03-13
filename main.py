@@ -1,5 +1,6 @@
 from unidecode import unidecode
 import handler.message_handler as message_handler
+import handler.bot_handler as bot_handler
 
 user = {
     'id': '4335647276450366',
@@ -12,12 +13,13 @@ user = {
     'gender': 'male'
 }
 
-message_text = 'weather'
+message_text = 'quote'
 
 response_text = message_handler.get_response_text(user, message_text)
 print(response_text)
 
-message_handler.get_all_data(message_handler)
+# bot_handler.typing(user["id"], 1)
+# message_handler.get_all_data(message_handler)
 
 # hello_inputs = open("data/hello/hello_input.txt", "r").read().replace(';\n', ';').split(";")
 # hello_outputs = open("data/hello/hello_output.txt", "r").read().replace(';\n', ';').split(";")

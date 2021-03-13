@@ -4,6 +4,8 @@ from datetime import datetime
 
 import config.util as util
 from unidecode import unidecode
+
+from handler import bot_handler
 from handler.bot_handler import bot
 
 # Load text from data folder
@@ -21,6 +23,13 @@ weather_outputs = util.get_list_from_file("data/weather/weather_output.txt")
 
 
 def get_response_text(user, message_text):
+    # Get recipient_id
+    recipient_id = user["id"]
+
+    # Start typing
+    bot_handler.typing(recipient_id, 1)
+
+    # Normalize message_text
     message_text = unidecode(message_text).lower()
     response_text = None
 
@@ -39,6 +48,8 @@ def get_response_text(user, message_text):
     else:
         response_text = handle_not_match_any_message(user)
     print(">> response_text : " + response_text)
+    # Stop typing
+    bot_handler.typing(recipient_id, 0)
     # return selected item to the user
     return response_text
 

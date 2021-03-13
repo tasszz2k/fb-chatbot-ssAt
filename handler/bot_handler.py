@@ -3,10 +3,13 @@ import json
 from pymessenger.bot import Bot
 from flask import Flask, request
 import config.util as util
+import requests
+import time
 
 ACCESS_TOKEN = open("config/access_token.txt", "r").read()
 VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
 bot = Bot(ACCESS_TOKEN)
+
 
 # Uses PyMessenger to send response to the user
 def send_message(recipient_id, response):
@@ -39,3 +42,24 @@ def get_user_by_id(user_id):
     # print(user)
     return user
     # ----------------
+
+
+def typing(recipient_id, action=1):
+    typing_action = 'typing_on' if action else 'typing_off'
+    print(typing_action)
+    time.sleep(1)
+    url = "https://graph.facebook.com/v2.6/me/messages";
+    params = {
+        'access_token': ACCESS_TOKEN
+    }
+    headers = {'content-type': 'application/json'}
+    body = {
+        'recipient': {
+            'id': recipient_id
+        },
+        'sender_action': typing_action
+    }
+
+    response = requests.post(url, params=params, json=body)
+    print(response.text)
+    return json.loads(response.text)

@@ -7,7 +7,6 @@ def send_get_request(url, params={}):
         params=params)
     return response
 
-
 def get_list_from_file(src):
     element_list = open(src, "r").read().replace(';\n', ';').split(";")
     return list(filter(None, element_list))
