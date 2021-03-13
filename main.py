@@ -12,12 +12,12 @@ user = {
     'gender': 'male'
 }
 
-message_text = 'Hi'
+message_text = 'weather'
 
 response_text = MessageHandler.get_response_text(user, message_text)
 print(response_text)
 
-# MessageHandler.get_all_data(MessageHandler)
+MessageHandler.get_all_data(MessageHandler)
 
 # hello_inputs = open("data/hello/hello_input.txt", "r").read().replace(';\n', ';').split(";")
 # hello_outputs = open("data/hello/hello_output.txt", "r").read().replace(';\n', ';').split(";")

@@ -5,7 +5,6 @@ from config.Util import Util
 from unidecode import unidecode
 
 
-
 class MessageHandler:
     # Load text from data folder
     hello_inputs = Util.get_list_from_file("data/hello/hello_input.txt")
@@ -17,8 +16,11 @@ class MessageHandler:
     quote_inputs = Util.get_list_from_file("data/quote/quote_input.txt")
     quote_outputs = Util.get_list_from_file("data/quote/quote_output.txt")
 
+    weather_inputs = Util.get_list_from_file("data/weather/weather_input.txt")
+    weather_outputs = Util.get_list_from_file("data/weather/weather_output.txt")
+
     def get_response_text(user, message_text):
-        message_text=unidecode(message_text).lower()
+        message_text = unidecode(message_text).lower()
         response_text = None
 
         # Hello
@@ -30,6 +32,9 @@ class MessageHandler:
         # Quote
         elif MessageHandler.check_string_contains_an_element_of_list(message_text, MessageHandler.quote_inputs):
             response_text = MessageHandler.handle_quote_message(user, message_text)
+        # Weather
+        elif MessageHandler.check_string_contains_an_element_of_list(message_text, MessageHandler.weather_inputs):
+            response_text = MessageHandler.handle_weather_message(user, message_text)
         else:
             response_text = MessageHandler.handle_not_match_any_message(user)
         print(">> response_text : " + response_text)
@@ -83,7 +88,8 @@ class MessageHandler:
         return response_text
 
     def handle_quote_message(user, message_text):
-        response = Util.send_get_request("https://quotes.rest/qod?language=en")
+        quote_url = "https://quotes.rest/qod?language=en"
+        response = Util.send_get_request(quote_url)
         response_text = "Quote"
         quote_str = "Quote of the day: \"{}\""
         # print(response.text)
@@ -103,7 +109,7 @@ class MessageHandler:
         gender = user["gender"]
         now = datetime.now()
         response_text = "None"
-        sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy  bảo thêm ạ!\n😢"
+        sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
 
         # check gender
         if gender == 'male':
@@ -115,6 +121,35 @@ class MessageHandler:
 
         return response_text
 
+    def handle_weather_message(user, message_text):
+        APP_ID_OPENWEATHERMAP = 'eda5d9eb59ecde1880816e988e56c122'
+        openweathermap_url = "https://api.openweathermap.org/data/2.5/weather"
+        params = {
+            'q': 'hanoi',
+            'appid': {APP_ID_OPENWEATHERMAP}
+        }
+        response = Util.send_get_request(openweathermap_url, params)
+        city = "Hanoi"
+        response_text = "Weather"
+        weather_str = '''Current weather in {} and forecast for today: 
+- Main: {},
+- Description: {},
+- Temperature: {},
+- MinTemperature: {} - MaxTemperature: {}
+source: http://openweathermap.org/img/w/{}.png
+'''
+        print(response.text)
+        data_json = json.loads(response.text)
+        weather = data_json["weather"][0]
+        main = data_json["main"]
+        print(type(main["temp"]))
+        response_text = weather_str.format(city, weather["main"], weather["description"],
+                                           Util.convertFahrenheitToCelsius(main["temp"]),
+                                           Util.convertFahrenheitToCelsius(main["temp_min"]),
+                                           Util.convertFahrenheitToCelsius(main["temp_max"]),
+                                           weather["icon"])
+        return response_text
+
     def check_string_contains_an_element_of_list(str, list):
         # print(any(element in str for element in list))
         return any(element in str for element in list)
@@ -124,3 +159,5 @@ class MessageHandler:
         print(self.hello_outputs)
         print(self.food_inputs)
         print(self.food_outputs)
+        print(self.weather_inputs)
+        print(self.weather_outputs)
