@@ -180,7 +180,7 @@ def handle_weather_message(user, message_text):
 def handle_number_message(user, message_text, min=0, max=99):
     num = random.randint(min, max)
     response_text = "Number"
-    number_str = "Con số may mắn: {}"
+    number_str = "Con số may mắn: {} 🌀🌀🌀"
 
     response_text = number_str.format(num)
     return response_text
