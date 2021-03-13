@@ -1,5 +1,5 @@
-from handler.MessageHandler import MessageHandler
 from unidecode import unidecode
+import handler.message_handler as message_handler
 
 user = {
     'id': '4335647276450366',
@@ -14,10 +14,10 @@ user = {
 
 message_text = 'weather'
 
-response_text = MessageHandler.get_response_text(user, message_text)
+response_text = message_handler.get_response_text(user, message_text)
 print(response_text)
 
-MessageHandler.get_all_data(MessageHandler)
+message_handler.get_all_data(message_handler)
 
 # hello_inputs = open("data/hello/hello_input.txt", "r").read().replace(';\n', ';').split(";")
 # hello_outputs = open("data/hello/hello_output.txt", "r").read().replace(';\n', ';').split(";")
