@@ -13,7 +13,7 @@ user = {
     'gender': 'male'
 }
 
-message_text = 'quote'
+message_text = 'num'
 
 response_text = message_handler.get_response_text(user, message_text)
 print(response_text)

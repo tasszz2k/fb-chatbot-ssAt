@@ -21,6 +21,9 @@ quote_outputs = util.get_list_from_file("data/quote/quote_output.txt")
 weather_inputs = util.get_list_from_file("data/weather/weather_input.txt")
 weather_outputs = util.get_list_from_file("data/weather/weather_output.txt")
 
+number_inputs = util.get_list_from_file("data/number/number_input.txt")
+number_outputs = util.get_list_from_file("data/number/number_output.txt")
+
 
 def get_response_text(user, message_text):
     # Get recipient_id
@@ -45,6 +48,9 @@ def get_response_text(user, message_text):
     # Weather
     elif check_string_contains_an_element_of_list(message_text, weather_inputs):
         response_text = handle_weather_message(user, message_text)
+    # Number
+    elif check_string_contains_an_element_of_list(message_text, number_inputs):
+        response_text = handle_number_message(user, message_text)
     else:
         response_text = handle_not_match_any_message(user)
     print(">> response_text : " + response_text)
@@ -168,6 +174,15 @@ def handle_weather_message(user, message_text):
                                        main["temp_max"])
     # Send weather source and icon
     bot.send_image_url(user["id"], weather_icon_url.format(weather["icon"]))
+    return response_text
+
+
+def handle_number_message(user, message_text, min=0, max=99):
+    num = random.randint(min, max)
+    response_text = "Number"
+    number_str = "Con số may mắn: {}"
+
+    response_text = number_str.format(num)
     return response_text
 
 

@@ -1,0 +1,3 @@
+con so;
+number;
+random;
