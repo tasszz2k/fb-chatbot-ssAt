@@ -142,7 +142,8 @@ def handle_weather_message(user, message_text):
 - Main: {},
 - Description: {},
 - Temperature: {}°C,
-- MinTemperature: {}°C - MaxTemperature: {}°C
+- Min Temperature: {}°C 
+- Max Temperature: {}°C
 '''
     weather_icon_url = "http://openweathermap.org/img/w/{}.png"
     print(response.text)
