@@ -195,7 +195,7 @@ def handle_number_message(user, message_text, min=0, max=99):
 
 def handle_music_message(user, message_text):
     playlist_items = get_playlist_items()
-    num = random.randint(playlist_items)
+    num = random.randint(0, len(playlist_items))
     response_text = "Music"
     music_str = "Music: 🌀 {} 🌀\n{}"
 
