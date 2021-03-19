@@ -1,0 +1,1150 @@
+{
+  "href": "https://api.spotify.com/v1/playlists/3IhDh1G4c4JoqaDUQtxIdv/tracks?offset=0&limit=100&fields=items(track(name%2Chref))&market=VN&additional_types=track%2Cepisode",
+  "items": [
+    {
+      "added_at": "2021-03-16T11:46:56Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0u3o3ESS1rnXlpF3VDI3gj"
+          },
+          "href": "https://api.spotify.com/v1/albums/0u3o3ESS1rnXlpF3VDI3gj",
+          "id": "0u3o3ESS1rnXlpF3VDI3gj",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273a15a7ad32c831dd1fbee52fe",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02a15a7ad32c831dd1fbee52fe",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851a15a7ad32c831dd1fbee52fe",
+              "width": 64
+            }
+          ],
+          "name": "Mascara",
+          "release_date": "2019-12-06",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:0u3o3ESS1rnXlpF3VDI3gj"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 295789,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA111900002"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2Jaaw8PrdUfPlU6o6tL5dl"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2Jaaw8PrdUfPlU6o6tL5dl",
+        "id": "2Jaaw8PrdUfPlU6o6tL5dl",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Mascara",
+        "popularity": 60,
+        "preview_url": "https://p.scdn.co/mp3-preview/4bd81e1336a7c21d065684f82b5d15c89ab97b41?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2Jaaw8PrdUfPlU6o6tL5dl"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:27Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7Kmjgg0UXtZyZQdgTuSg1d"
+          },
+          "href": "https://api.spotify.com/v1/albums/7Kmjgg0UXtZyZQdgTuSg1d",
+          "id": "7Kmjgg0UXtZyZQdgTuSg1d",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2731f83465c080828d1cc9f3304",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e021f83465c080828d1cc9f3304",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048511f83465c080828d1cc9f3304",
+              "width": 64
+            }
+          ],
+          "name": "Qua Khung Cửa Sổ",
+          "release_date": "2020-11-11",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:7Kmjgg0UXtZyZQdgTuSg1d"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 299090,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA112000323"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6jOP08e9PHDnoF3reZcePE"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6jOP08e9PHDnoF3reZcePE",
+        "id": "6jOP08e9PHDnoF3reZcePE",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Qua Khung Cửa Sổ",
+        "popularity": 57,
+        "preview_url": "https://p.scdn.co/mp3-preview/5e8692033c099f28f6e622709f40cf404c93407e?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6jOP08e9PHDnoF3reZcePE"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:30Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4Ah5jAqDu3nUrGlKysqmXG"
+          },
+          "href": "https://api.spotify.com/v1/albums/4Ah5jAqDu3nUrGlKysqmXG",
+          "id": "4Ah5jAqDu3nUrGlKysqmXG",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273efdff73a682f18a6a0dc3432",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02efdff73a682f18a6a0dc3432",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851efdff73a682f18a6a0dc3432",
+              "width": 64
+            }
+          ],
+          "name": "Giá Như",
+          "release_date": "2020-12-25",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:4Ah5jAqDu3nUrGlKysqmXG"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 297000,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA112000382"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/42mIT9wfmgA48DTN8GmCxX"
+        },
+        "href": "https://api.spotify.com/v1/tracks/42mIT9wfmgA48DTN8GmCxX",
+        "id": "42mIT9wfmgA48DTN8GmCxX",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Giá Như",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/6af48dac6f68e5fb19c0f4346fd5e9a85efa7c05?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:42mIT9wfmgA48DTN8GmCxX"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:33Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1aBnXH1LQCX6w6te98vRoi"
+          },
+          "href": "https://api.spotify.com/v1/albums/1aBnXH1LQCX6w6te98vRoi",
+          "id": "1aBnXH1LQCX6w6te98vRoi",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273e54dbaeef3ecd65e72e2a545",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02e54dbaeef3ecd65e72e2a545",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851e54dbaeef3ecd65e72e2a545",
+              "width": 64
+            }
+          ],
+          "name": "Vùng Ký Ức",
+          "release_date": "2020-03-27",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:1aBnXH1LQCX6w6te98vRoi"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 298211,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA112000016"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1503Da6qbgNifRnRwIjtZe"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1503Da6qbgNifRnRwIjtZe",
+        "id": "1503Da6qbgNifRnRwIjtZe",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Vùng Ký Ức",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/00d97dd07953c9f0039c37882ef2dff104c56945?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1503Da6qbgNifRnRwIjtZe"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:37Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2i62jora7liYgLSk3h8Xmb"
+          },
+          "href": "https://api.spotify.com/v1/albums/2i62jora7liYgLSk3h8Xmb",
+          "id": "2i62jora7liYgLSk3h8Xmb",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27306bbb7b057b82a85800d27b7",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0206bbb7b057b82a85800d27b7",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485106bbb7b057b82a85800d27b7",
+              "width": 64
+            }
+          ],
+          "name": "Và Thế Là Hết",
+          "release_date": "2018-12-24",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:2i62jora7liYgLSk3h8Xmb"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 291650,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA112000020"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Bk064jKjWtfdOD8UkcImR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0Bk064jKjWtfdOD8UkcImR",
+        "id": "0Bk064jKjWtfdOD8UkcImR",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Và Thế Là Hết",
+        "popularity": 55,
+        "preview_url": "https://p.scdn.co/mp3-preview/a28044936da3443ea1e86350ff4f5a7f2f7351d4?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0Bk064jKjWtfdOD8UkcImR"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:39Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3OeMev79HMbyR6z2STSWdG"
+          },
+          "href": "https://api.spotify.com/v1/albums/3OeMev79HMbyR6z2STSWdG",
+          "id": "3OeMev79HMbyR6z2STSWdG",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27354f5d72f4efcaf7dae81e79f",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0254f5d72f4efcaf7dae81e79f",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485154f5d72f4efcaf7dae81e79f",
+              "width": 64
+            }
+          ],
+          "name": "Nếu Ngày Mai Không Đến",
+          "release_date": "2019-03-22",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:3OeMev79HMbyR6z2STSWdG"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 330967,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA112000018"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1IyaXs95EqH8emANUrhRwH"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1IyaXs95EqH8emANUrhRwH",
+        "id": "1IyaXs95EqH8emANUrhRwH",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Nếu Ngày Mai Không Đến",
+        "popularity": 43,
+        "preview_url": "https://p.scdn.co/mp3-preview/219af0a579f3ecc9d36d57520b17a535da0f42bc?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1IyaXs95EqH8emANUrhRwH"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:42Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4c0kP5hJrKy9QrN6DgSWKJ"
+          },
+          "href": "https://api.spotify.com/v1/albums/4c0kP5hJrKy9QrN6DgSWKJ",
+          "id": "4c0kP5hJrKy9QrN6DgSWKJ",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27370413bcda71e96f3b13cc689",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0270413bcda71e96f3b13cc689",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485170413bcda71e96f3b13cc689",
+              "width": 64
+            }
+          ],
+          "name": "Có Em Đời Bỗng Vui",
+          "release_date": "2020-02-07",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:4c0kP5hJrKy9QrN6DgSWKJ"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 247428,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "FRX281969021"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/696w9BHmEY62myVCSDyrYW"
+        },
+        "href": "https://api.spotify.com/v1/tracks/696w9BHmEY62myVCSDyrYW",
+        "id": "696w9BHmEY62myVCSDyrYW",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Có Em Đời Bỗng Vui",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/de8daeb1cce5f8bed8bd9d4b835d3cf2e360e9c4?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:696w9BHmEY62myVCSDyrYW"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:45Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+              },
+              "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+              "id": "2xvW7dgL1640K8exTcRMS4",
+              "name": "Chillies",
+              "type": "artist",
+              "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/39DlQMTaGCwxPmDs9y2KEN"
+          },
+          "href": "https://api.spotify.com/v1/albums/39DlQMTaGCwxPmDs9y2KEN",
+          "id": "39DlQMTaGCwxPmDs9y2KEN",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27331849e55956290eba5cf0f54",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0231849e55956290eba5cf0f54",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485131849e55956290eba5cf0f54",
+              "width": 64
+            }
+          ],
+          "name": "Những Con Đường Song Song",
+          "release_date": "2019-05-22",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:39DlQMTaGCwxPmDs9y2KEN"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2xvW7dgL1640K8exTcRMS4"
+            },
+            "href": "https://api.spotify.com/v1/artists/2xvW7dgL1640K8exTcRMS4",
+            "id": "2xvW7dgL1640K8exTcRMS4",
+            "name": "Chillies",
+            "type": "artist",
+            "uri": "spotify:artist:2xvW7dgL1640K8exTcRMS4"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 297662,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA112000019"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70cMlm2Ib00pnJHtjMem9b"
+        },
+        "href": "https://api.spotify.com/v1/tracks/70cMlm2Ib00pnJHtjMem9b",
+        "id": "70cMlm2Ib00pnJHtjMem9b",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Những Con Đường Song Song",
+        "popularity": 43,
+        "preview_url": "https://p.scdn.co/mp3-preview/7fb2f71175ab5a3ea0ce70df6dc90839184a108b?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:70cMlm2Ib00pnJHtjMem9b"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:52Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+              },
+              "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+              "id": "3FwYnbtGNt8hJfjNuOfpeG",
+              "name": "Ha Anh Tuan",
+              "type": "artist",
+              "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6qVMysGnHlX7JaggI4YFLl"
+          },
+          "href": "https://api.spotify.com/v1/albums/6qVMysGnHlX7JaggI4YFLl",
+          "id": "6qVMysGnHlX7JaggI4YFLl",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d85a7ce435c8e184d646002a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d85a7ce435c8e184d646002a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d85a7ce435c8e184d646002a",
+              "width": 64
+            }
+          ],
+          "name": "Truyện Ngắn",
+          "release_date": "2020-11-07",
+          "release_date_precision": "day",
+          "total_tracks": 6,
+          "type": "album",
+          "uri": "spotify:album:6qVMysGnHlX7JaggI4YFLl"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+            },
+            "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+            "id": "3FwYnbtGNt8hJfjNuOfpeG",
+            "name": "Ha Anh Tuan",
+            "type": "artist",
+            "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 346153,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA0M1909211"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6QKBc1tmxsGs5vuyDZDDmy"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6QKBc1tmxsGs5vuyDZDDmy",
+        "id": "6QKBc1tmxsGs5vuyDZDDmy",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Xuân Thì",
+        "popularity": 44,
+        "preview_url": "https://p.scdn.co/mp3-preview/b42ae3cfe2d141f32fc43f147e2bf469c6930aee?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:6QKBc1tmxsGs5vuyDZDDmy"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:55Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+              },
+              "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+              "id": "3FwYnbtGNt8hJfjNuOfpeG",
+              "name": "Ha Anh Tuan",
+              "type": "artist",
+              "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6qVMysGnHlX7JaggI4YFLl"
+          },
+          "href": "https://api.spotify.com/v1/albums/6qVMysGnHlX7JaggI4YFLl",
+          "id": "6qVMysGnHlX7JaggI4YFLl",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d85a7ce435c8e184d646002a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d85a7ce435c8e184d646002a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d85a7ce435c8e184d646002a",
+              "width": 64
+            }
+          ],
+          "name": "Truyện Ngắn",
+          "release_date": "2020-11-07",
+          "release_date_precision": "day",
+          "total_tracks": 6,
+          "type": "album",
+          "uri": "spotify:album:6qVMysGnHlX7JaggI4YFLl"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+            },
+            "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+            "id": "3FwYnbtGNt8hJfjNuOfpeG",
+            "name": "Ha Anh Tuan",
+            "type": "artist",
+            "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 341428,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA0M1909210"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5GyXgXR9L1ONhN2lSk8m6X"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5GyXgXR9L1ONhN2lSk8m6X",
+        "id": "5GyXgXR9L1ONhN2lSk8m6X",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Có Chàng Trai Viết Lên Cây",
+        "popularity": 42,
+        "preview_url": "https://p.scdn.co/mp3-preview/349c37195d99798730ae8b49e2cabadcdee336fa?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:5GyXgXR9L1ONhN2lSk8m6X"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:47:57Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+              },
+              "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+              "id": "3FwYnbtGNt8hJfjNuOfpeG",
+              "name": "Ha Anh Tuan",
+              "type": "artist",
+              "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0ojP2mHUe8RpApSyfEKJMV"
+          },
+          "href": "https://api.spotify.com/v1/albums/0ojP2mHUe8RpApSyfEKJMV",
+          "id": "0ojP2mHUe8RpApSyfEKJMV",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2737cbe37f4434f9007b8a2f6d5",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e027cbe37f4434f9007b8a2f6d5",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048517cbe37f4434f9007b8a2f6d5",
+              "width": 64
+            }
+          ],
+          "name": "SEE SING SHARE 2",
+          "release_date": "2020-11-13",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:0ojP2mHUe8RpApSyfEKJMV"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+            },
+            "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+            "id": "3FwYnbtGNt8hJfjNuOfpeG",
+            "name": "Ha Anh Tuan",
+            "type": "artist",
+            "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 302000,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA0M1909297"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1LGQzkZNKf0x07xdIMV3kV"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1LGQzkZNKf0x07xdIMV3kV",
+        "id": "1LGQzkZNKf0x07xdIMV3kV",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Chưa Bao Giờ",
+        "popularity": 41,
+        "preview_url": "https://p.scdn.co/mp3-preview/25e83def2e83021151e60a8c84f5eb31d2d0f227?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:1LGQzkZNKf0x07xdIMV3kV"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    },
+    {
+      "added_at": "2021-03-16T11:48:02Z",
+      "added_by": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/dhyxi2nynfg8ix3ddcmmhhl6u"
+        },
+        "href": "https://api.spotify.com/v1/users/dhyxi2nynfg8ix3ddcmmhhl6u",
+        "id": "dhyxi2nynfg8ix3ddcmmhhl6u",
+        "type": "user",
+        "uri": "spotify:user:dhyxi2nynfg8ix3ddcmmhhl6u"
+      },
+      "is_local": False,
+      "primary_color": None,
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+              },
+              "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+              "id": "3FwYnbtGNt8hJfjNuOfpeG",
+              "name": "Ha Anh Tuan",
+              "type": "artist",
+              "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/38lsNI4hAMxUY2yQyveWfY"
+          },
+          "href": "https://api.spotify.com/v1/albums/38lsNI4hAMxUY2yQyveWfY",
+          "id": "38lsNI4hAMxUY2yQyveWfY",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273543e54ede9ce98b1c0487cdb",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02543e54ede9ce98b1c0487cdb",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851543e54ede9ce98b1c0487cdb",
+              "width": 64
+            }
+          ],
+          "name": "SEE SING SHARE 1",
+          "release_date": "2020-11-13",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:38lsNI4hAMxUY2yQyveWfY"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3FwYnbtGNt8hJfjNuOfpeG"
+            },
+            "href": "https://api.spotify.com/v1/artists/3FwYnbtGNt8hJfjNuOfpeG",
+            "id": "3FwYnbtGNt8hJfjNuOfpeG",
+            "name": "Ha Anh Tuan",
+            "type": "artist",
+            "uri": "spotify:artist:3FwYnbtGNt8hJfjNuOfpeG"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 315305,
+        "episode": False,
+        "explicit": False,
+        "external_ids": {
+          "isrc": "VNA0M1909291"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6v2XzgdJRZIdRbxD5euMal"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6v2XzgdJRZIdRbxD5euMal",
+        "id": "6v2XzgdJRZIdRbxD5euMal",
+        "is_local": False,
+        "is_playable": True,
+        "name": "Tháng 4 Là Lời Nói Dối Của Em",
+        "popularity": 48,
+        "preview_url": "https://p.scdn.co/mp3-preview/0b2cbdff3ea1793e6b3f6b7caf11b7f5ead40cbe?cid=db2735761229484685c1e719a8940998",
+        "track": True,
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:6v2XzgdJRZIdRbxD5euMal"
+      },
+      "video_thumbnail": {
+        "url": None
+      }
+    }
+  ],
+  "limit": 100,
+  "next": None,
+  "offset": 0,
+  "previous": None,
+  "total": 12
+}

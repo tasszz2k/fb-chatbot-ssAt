@@ -9,6 +9,8 @@ from handler import bot_handler
 from handler.bot_handler import bot
 
 # Load text from data folder
+from handler.spotify_handler import get_playlist_items
+
 hello_inputs = util.get_list_from_file("data/hello/hello_input.txt")
 hello_outputs = util.get_list_from_file("data/hello/hello_output.txt")
 
@@ -23,6 +25,9 @@ weather_outputs = util.get_list_from_file("data/weather/weather_output.txt")
 
 number_inputs = util.get_list_from_file("data/number/number_input.txt")
 number_outputs = util.get_list_from_file("data/number/number_output.txt")
+
+music_inputs = util.get_list_from_file("data/music/music_input.txt")
+music_outputs = util.get_list_from_file("data/music/music_output.txt")
 
 
 def get_response_text(user, message_text):
@@ -51,6 +56,9 @@ def get_response_text(user, message_text):
     # Number
     elif check_string_contains_an_element_of_list(message_text, number_inputs):
         response_text = handle_number_message(user, message_text)
+    # Music
+    elif check_string_contains_an_element_of_list(message_text, music_inputs):
+        response_text = handle_music_message(user, message_text)
     else:
         response_text = handle_not_match_any_message(user)
     print(">> response_text : " + response_text)
@@ -180,9 +188,18 @@ def handle_weather_message(user, message_text):
 def handle_number_message(user, message_text, min=0, max=99):
     num = random.randint(min, max)
     response_text = "Number"
-    number_str = "Con số may mắn: {} 🌀🌀🌀"
+    number_str = "Con số may mắn: 🌀 {} 🌀"
 
     response_text = number_str.format(num)
+    return response_text
+
+def handle_music_message(user, message_text):
+    playlist_items = get_playlist_items()
+    num = random.randint(playlist_items)
+    response_text = "Music"
+    music_str = "Music: 🌀 {} 🌀\n{}"
+
+    response_text = music_str.format(playlist_items[num]['name'], playlist_items[num]['spotify'])
     return response_text
 
 
