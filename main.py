@@ -19,7 +19,7 @@ response_text = message_handler.get_response_text(user, message_text)
 print(response_text)
 
 # bot_handler.typing(user["id"], 1)
-# message_handler.get_all_data(message_handler)
+message_handler.get_all_data(message_handler)
 
 # hello_inputs = open("data/hello/hello_input.txt", "r").read().replace(';\n', ';').split(";")
 # hello_outputs = open("data/hello/hello_output.txt", "r").read().replace(';\n', ';').split(";")

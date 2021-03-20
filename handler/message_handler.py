@@ -101,7 +101,7 @@ def handle_food_message(user, message_text):
     gender = user["gender"]
     now = datetime.now()
     response_text = "food"
-    food_str = "Bữa nay ăn {} là hợp lý {} {} ạ!\n^^"
+    food_str = "Bữa nay ăn {} là hợp lý {} {} ạ!\n🥗🥗🥗"
 
     food = random.choice(food_outputs)
 
@@ -120,7 +120,7 @@ def handle_quote_message(user, message_text):
     quote_url = "https://quotes.rest/qod?language=en"
     response = util.send_get_request(quote_url)
     response_text = "Quote"
-    quote_str = "Quote of the day: \"{}\""
+    quote_str = "Quote of the day: 💬 \"{}\" 💬"
     # print(response.text)
     data_json = json.loads(response.text)
     quotes = data_json['contents']['quotes']
@@ -164,6 +164,7 @@ def handle_weather_message(user, message_text):
     city = "Hanoi"
     response_text = "Weather"
     weather_str = '''Current weather in {} and forecast for today: 
+    ❄❄❄
 - Main: {},
 - Description: {},
 - Temperature: {}°C,
@@ -193,11 +194,12 @@ def handle_number_message(user, message_text, min=0, max=99):
     response_text = number_str.format(num)
     return response_text
 
+
 def handle_music_message(user, message_text):
     playlist_items = get_playlist_items()
-    num = random.randint(0, len(playlist_items))
+    num = random.randint(0, len(playlist_items) - 1)
     response_text = "Music"
-    music_str = "Music: 🌀 {} 🌀\n{}"
+    music_str = "Music: ️🎶 {} ️🎶\n{}"
 
     response_text = music_str.format(playlist_items[num]['name'], playlist_items[num]['spotify'])
     return response_text
@@ -215,3 +217,5 @@ def get_all_data(self):
     print(self.food_outputs)
     print(self.weather_inputs)
     print(self.weather_outputs)
+    print(self.music_inputs)
+    print(self.music_outputs)

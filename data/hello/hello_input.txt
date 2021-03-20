@@ -1,5 +1,5 @@
-xin chao;
-chao;
-hello;
-he lo;
+xin chao
+chao
+hello
+he lo
 hi

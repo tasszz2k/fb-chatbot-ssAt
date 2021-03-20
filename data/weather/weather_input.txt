@@ -1,2 +1,2 @@
-thoi tiet;
-weather;
+thoi tiet
+weather

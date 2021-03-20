@@ -1,2 +1,2 @@
-quote;
-quotes;
+quote
+quotes

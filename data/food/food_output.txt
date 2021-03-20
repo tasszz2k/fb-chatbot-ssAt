@@ -1,4 +1,4 @@
-Cơm;
-Thịt;
-Cá;
-Rau;
+Cơm
+Thịt
+Cá
+Rau
