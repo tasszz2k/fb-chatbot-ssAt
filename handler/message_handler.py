@@ -101,7 +101,7 @@ def handle_food_message(user, message_text):
     gender = user["gender"]
     now = datetime.now()
     response_text = "food"
-    food_str = "Bữa nay ăn {} là hợp lý {} {} ạ!\n🥗🥗🥗"
+    food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗"
 
     food = random.choice(food_outputs)
 
