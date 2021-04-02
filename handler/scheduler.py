@@ -38,6 +38,7 @@ def job(users):
 def schedule_task():
     print("schedule_task()")
 
+    schedule.every().day.at("06:00").do(lambda: wakeup(users))
     schedule.every().day.at("08:00").do(lambda: job(users))
     schedule.every().day.at("12:00").do(lambda: job(users))
     schedule.every().day.at("13:30").do(lambda: job(users))
@@ -46,7 +47,7 @@ def schedule_task():
     schedule.every().day.at("17:30").do(lambda: job(users))
     schedule.every().day.at("18:30").do(lambda: job(users))
     schedule.every().day.at("21:30").do(lambda: job(users))
-    schedule.every().day.at("23:30").do(lambda: job(users))
+    schedule.every().day.at("23:30").do(lambda: goodnight(users))
 
     while 1:
         schedule.run_pending()
@@ -57,3 +58,38 @@ def schedule_task():
 def create_schedule_task_multithreading():
     thread_schedule = threading.Thread(target=schedule_task)
     thread_schedule.start()
+
+
+def wakeup(users):
+    for user in users:
+        recipient_id = user['id']
+        name = user["first_name"]
+        gender = user["gender"]
+        gender_call = "chị" if (gender == "female") else "anh"
+
+        message_text = '''
+Trời sáng rồi,
+Dậy thôi {} {} ơiii.
+⏰⏰⏰
+    '''
+        message_text = message_text.format(gender_call, name)
+        print(user, message_text)
+        send_message(recipient_id, message_text)
+
+
+def goodnight(users):
+    for user in users:
+        recipient_id = user['id']
+        name = user["first_name"]
+        gender = user["gender"]
+        gender_call = "chị" if (gender == "female") else "anh"
+
+        message_text = '''
+Giờ cũng muộn rồi,
+Đi ngủ thôi {0} {1} ơiii.
+Chúc {0} ngủ ngon, mơ đẹp ạ 
+💤💤💤
+    '''
+        message_text = message_text.format(gender_call, name)
+        print(user, message_text)
+        send_message(recipient_id, message_text)
