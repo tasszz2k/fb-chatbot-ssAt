@@ -78,17 +78,12 @@ def handle_hello_message(user, message_text):
     '''
     name = user["first_name"]
     gender = user["gender"]
+    gender_call = "chị" if (gender == "female") else "anh"
     now = datetime.now()
     response_text = "hello"
     hello_str = "Chào {} {}, em là ssAt - đệ anh Tuấn Anh ạ!\n^^"
 
-    # check gender
-    if gender == 'male':
-        # gender is male
-        response_text = hello_str.format("anh", name)
-    else:
-        # gender is female
-        response_text = hello_str.format("chị", name)
+    response_text = hello_str.format(gender_call, name)
 
     return response_text
 
@@ -134,17 +129,13 @@ def handle_not_match_any_message(user):
     '''
     name = user["first_name"]
     gender = user["gender"]
+    gender_call = "chị" if (gender == "female") else "anh"
     now = datetime.now()
     response_text = "None"
     sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
 
-    # check gender
-    if gender == 'male':
-        # gender is male
-        response_text = sorry_str.format("anh", name)
-    else:
-        # gender is female
-        response_text = sorry_str.format("chị", name)
+
+    response_text = sorry_str.format(gender_call, name)
 
     return response_text
 
