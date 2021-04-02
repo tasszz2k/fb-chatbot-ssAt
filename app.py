@@ -3,6 +3,11 @@ from pymessenger.bot import Bot
 import handler.bot_handler as bot_handler
 import handler.message_handler as message_handler
 import config.util as util
+from handler.scheduler import create_schedule_task_multithreading
+
+
+# Create new schedule task to send message
+create_schedule_task_multithreading()
 
 app = Flask(__name__)  # Initializing our Flask application
 
