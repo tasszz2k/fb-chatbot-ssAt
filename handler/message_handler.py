@@ -204,9 +204,9 @@ def handle_music_message(user, message_text):
     playlist_items = get_playlist_items()
     num = random.randint(0, len(playlist_items) - 1)
     response_text = "Music"
-    music_str = "Nay nghe bài này đi {} {} ơi: \n️🎶️🎶️🎶\n{}\n️🎶️🎶️🎶\nLink spotify nè: {}"
+    music_str = "Nay nghe bài này đi {} {} ơi: \n️🎶️🎶️🎶\n'{}' - {}\n️🎶️🎶️🎶\nLink spotify nè: {}"
 
-    response_text = music_str.format(gender_call, name, playlist_items[num]['name'], playlist_items[num]['spotify'])
+    response_text = music_str.format(gender_call, name, playlist_items[num]['name'], playlist_items[num]['artists'], playlist_items[num]['spotify'])
     return response_text
 
 

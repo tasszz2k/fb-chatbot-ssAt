@@ -27,7 +27,8 @@ def get_playlist_items():
         # print(type(track))
         track = {
             'name': song['track']['name'],
-            'spotify': song['track']['external_urls']['spotify']
+            'spotify': song['track']['external_urls']['spotify'],
+            'artists': song['track']['artists'][0]['name']
         }
         tracks.append(track)
     return tracks
