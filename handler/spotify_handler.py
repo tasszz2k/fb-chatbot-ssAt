@@ -20,7 +20,7 @@ sp = spotipy.Spotify(auth=token)
 
 def get_playlist_items():
     results = sp.playlist_items(playlist_id, fields="items.track", limit=100, offset=0, market='VN')
-    print(results)
+    # print(results)
     tracks = []
     for song in results["items"]:
         # print(track)
@@ -33,4 +33,4 @@ def get_playlist_items():
     return tracks
 
 
-print(get_playlist_items())
+# print(get_playlist_items())

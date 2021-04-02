@@ -103,7 +103,7 @@ def handle_food_message(user, message_text):
     gender = user["gender"]
     now = datetime.now()
     response_text = "food"
-    food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗\nCông thức nấu ăn: https://cookpad.com/vn/tim-kiem/{} "
+    food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗\nCông thức nấu ăn: \nhttps://cookpad.com/vn/tim-kiem/{} "
 
     food = random.choice(food_outputs)
 
@@ -198,12 +198,15 @@ def handle_number_message(user, message_text, min=0, max=99):
 
 
 def handle_music_message(user, message_text):
+    name = user["first_name"]
+    gender = user["gender"]
+    gender_call = "chị" if (gender == "female") else "anh"
     playlist_items = get_playlist_items()
     num = random.randint(0, len(playlist_items) - 1)
     response_text = "Music"
-    music_str = "Music: ️🎶 {} ️🎶\n{}"
+    music_str = "Nay nghe bài này đi {} {} ơi: \n️🎶️🎶️🎶\n{}\n️🎶️🎶️🎶\nLink spotify nè: {}"
 
-    response_text = music_str.format(playlist_items[num]['name'], playlist_items[num]['spotify'])
+    response_text = music_str.format(gender_call, name, playlist_items[num]['name'], playlist_items[num]['spotify'])
     return response_text
 
 
