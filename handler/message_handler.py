@@ -160,11 +160,11 @@ def handle_weather_message(user, message_text):
 - Max Temperature: {}°C
 '''
     weather_icon_url = "http://openweathermap.org/img/w/{}.png"
-    print(response.text)
+    # print(response.text)
     data_json = json.loads(response.text)
     weather = data_json["weather"][0]
     main = data_json["main"]
-    print(type(main["temp"]))
+    # print(type(main["temp"]))
     response_text = weather_str.format(city, weather["main"], weather["description"],
                                        main["temp"],
                                        main["temp_min"],

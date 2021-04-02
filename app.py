@@ -36,7 +36,7 @@ def receive_message():
                     recipient_id = message['sender']['id']
                     # ----------------
                     user = bot_handler.get_user_by_id(recipient_id)
-                    print(user)
+                    # print(user)
                     # ----------------
                     # if user send us any message is text
                     receive_message = message['message'].get('text')
