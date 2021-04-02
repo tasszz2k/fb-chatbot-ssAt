@@ -1,3 +1,5 @@
+import time
+
 from unidecode import unidecode
 import handler.message_handler as message_handler
 import handler.bot_handler as bot_handler
@@ -14,11 +16,15 @@ user = {
     'gender': 'male'
 }
 
+create_schedule_task_multithreading()
 
 message_text = 'music'
 
 response_text = message_handler.get_response_text(user, message_text)
 print(response_text)
+for i in range(100):
+    print(i)
+    time.sleep(1)
 
 
 # bot_handler.typing(user["id"], 1)
