@@ -1,6 +1,7 @@
 import random
 import json
 from datetime import datetime
+import urllib.parse
 
 import config.util as util
 from unidecode import unidecode
@@ -10,6 +11,7 @@ from handler.bot_handler import bot
 
 # Load text from data folder
 from handler.spotify_handler import get_playlist_items
+
 
 hello_inputs = util.get_list_from_file("data/hello/hello_input.txt")
 hello_outputs = util.get_list_from_file("data/hello/hello_output.txt")
@@ -101,14 +103,14 @@ def handle_food_message(user, message_text):
     gender = user["gender"]
     now = datetime.now()
     response_text = "food"
-    food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗"
+    food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗\nCông thức nấu ăn: https://cookpad.com/vn/tim-kiem/{} "
 
     food = random.choice(food_outputs)
 
     # check gender
     if gender == 'male':
         # gender is male
-        response_text = food_str.format(food, "anh", name)
+        response_text = food_str.format(food, "anh", name, urllib.parse.quote(food))
     else:
         # gender is female
         response_text = food_str.format(food, "chị", name)
