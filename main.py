@@ -13,10 +13,10 @@ user = {
     'profile_pic': 'https://platform-lookaside.fbsbx.com/platform/profilepic/?psid=4335647276450366&width=1024&ext=1617512123&hash=AeQGMdIxEE0f-VfMfrk',
     'locale': 'en_GB',
     'timezone': 7,
-    'gender': 'female'
+    'gender': 'male'
 }
 
-# create_schedule_task_multithreading()
+create_schedule_task_multithreading()
 
 message_text = 'food'
 

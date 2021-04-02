@@ -37,20 +37,20 @@ def job(users):
 
 def schedule_task():
     print("schedule_task()")
-    # schedule.every(60).seconds.do(lambda: job(users))
 
-    # schedule.every(30).seconds.do(job(users))
-    # schedule.every(10).minutes.do(job)
-    # schedule.every().hour.do(job)
-    schedule.every().day.at("08:00").do(job)
-    schedule.every().day.at("12:00").do(job)
-    schedule.every().day.at("13:30").do(job)
-    schedule.every().day.at("21:30").do(job)
-    schedule.every().day.at("23:30").do(job)
+    schedule.every().day.at("08:00").do(lambda: job(users))
+    schedule.every().day.at("12:00").do(lambda: job(users))
+    schedule.every().day.at("13:30").do(lambda: job(users))
+    schedule.every().day.at("15:00").do(lambda: job(users))
+    schedule.every().day.at("16:00").do(lambda: job(users))
+    schedule.every().day.at("17:30").do(lambda: job(users))
+    schedule.every().day.at("18:30").do(lambda: job(users))
+    schedule.every().day.at("21:30").do(lambda: job(users))
+    schedule.every().day.at("23:30").do(lambda: job(users))
 
     while 1:
         schedule.run_pending()
-        time.sleep(30)
+        time.sleep(300)
     pass
 
 
