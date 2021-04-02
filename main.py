@@ -13,18 +13,18 @@ user = {
     'profile_pic': 'https://platform-lookaside.fbsbx.com/platform/profilepic/?psid=4335647276450366&width=1024&ext=1617512123&hash=AeQGMdIxEE0f-VfMfrk',
     'locale': 'en_GB',
     'timezone': 7,
-    'gender': 'male'
+    'gender': 'female'
 }
 
-create_schedule_task_multithreading()
+# create_schedule_task_multithreading()
 
-message_text = 'music'
+message_text = 'food'
 
 response_text = message_handler.get_response_text(user, message_text)
-print(response_text)
-for i in range(100):
-    print(i)
-    time.sleep(1)
+# print(response_text)
+# for i in range(100):
+#     print(i)
+#     time.sleep(1)
 
 
 # bot_handler.typing(user["id"], 1)

@@ -101,19 +101,14 @@ def handle_food_message(user, message_text):
     '''
     name = user["first_name"]
     gender = user["gender"]
+    gender_call = "chị" if (gender == "female") else "anh"
     now = datetime.now()
     response_text = "food"
     food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗\nCông thức nấu ăn: \nhttps://cookpad.com/vn/tim-kiem/{} "
 
     food = random.choice(food_outputs)
 
-    # check gender
-    if gender == 'male':
-        # gender is male
-        response_text = food_str.format(food, "anh", name, urllib.parse.quote(food))
-    else:
-        # gender is female
-        response_text = food_str.format(food, "chị", name)
+    response_text = food_str.format(food, gender_call, name, urllib.parse.quote(food))
 
     return response_text
 
