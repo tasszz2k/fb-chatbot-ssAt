@@ -3,3 +3,5 @@ mon an
 mon ngon
 hom nay an gi
 food
+mon gi
+an com
