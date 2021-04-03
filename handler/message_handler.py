@@ -43,11 +43,9 @@ def get_response_text(user, message_text):
     message_text = unidecode(message_text).lower()
     response_text = None
 
-    # Hello
-    if check_string_contains_an_element_of_list(message_text, hello_inputs):
-        response_text = handle_hello_message(user, message_text)
+
     # Food
-    elif check_string_contains_an_element_of_list(message_text, food_inputs):
+    if check_string_contains_an_element_of_list(message_text, food_inputs):
         response_text = handle_food_message(user, message_text)
     # Quote
     elif check_string_contains_an_element_of_list(message_text, quote_inputs):
@@ -61,6 +59,9 @@ def get_response_text(user, message_text):
     # Music
     elif check_string_contains_an_element_of_list(message_text, music_inputs):
         response_text = handle_music_message(user, message_text)
+    # Hello
+    elif check_string_contains_an_element_of_list(message_text, hello_inputs):
+        response_text = handle_hello_message(user, message_text)
     else:
         response_text = handle_not_match_any_message(user)
     print(">> response_text : " + response_text)
