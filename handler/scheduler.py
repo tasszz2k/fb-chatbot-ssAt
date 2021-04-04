@@ -44,12 +44,12 @@ def schedule_task():
     schedule.every().day.at("12:00").do(lambda: job(users))
     schedule.every().day.at("13:30").do(lambda: job(users))
     #
-    # schedule.every().day.at("12:31").do(lambda: wakeup(users))
-    # schedule.every().day.at("12:32").do(lambda: goodnight(users))
-    # schedule.every().day.at("12:33").do(lambda: wakeup(users))
-    # schedule.every().day.at("12:34").do(lambda: goodnight(users))
-    # schedule.every().day.at("12:35").do(lambda: wakeup(users))
-    # schedule.every().day.at("12:36").do(lambda: goodnight(users))
+    schedule.every().day.at("12:31").do(lambda: wakeup(users))
+    schedule.every().day.at("12:32").do(lambda: goodnight(users))
+    schedule.every().day.at("12:33").do(lambda: wakeup(users))
+    schedule.every().day.at("12:34").do(lambda: goodnight(users))
+    schedule.every().day.at("12:35").do(lambda: wakeup(users))
+    schedule.every().day.at("12:36").do(lambda: goodnight(users))
 
     schedule.every().day.at("18:30").do(lambda: job(users))
     schedule.every().day.at("21:30").do(lambda: job(users))
