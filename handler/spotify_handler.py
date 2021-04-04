@@ -14,7 +14,7 @@ playlist_id = '3IhDh1G4c4JoqaDUQtxIdv'
 
 auth_manager = oauth2.SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
 token = auth_manager.get_access_token()
-print(token)
+# print(token)
 sp = spotipy.Spotify(auth=token)
 
 

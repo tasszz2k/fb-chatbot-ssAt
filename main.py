@@ -16,9 +16,10 @@ user = {
     'gender': 'male'
 }
 
-create_schedule_task_multithreading()
+# create_schedule_task_multithreading()
 
-message_text = 'food'
+
+message_text = 'dsajdilsa'
 
 response_text = message_handler.get_response_text(user, message_text)
 # print(response_text)

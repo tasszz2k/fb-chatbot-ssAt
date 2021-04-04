@@ -12,7 +12,6 @@ from handler.bot_handler import bot
 # Load text from data folder
 from handler.spotify_handler import get_playlist_items
 
-
 hello_inputs = util.get_list_from_file("data/hello/hello_input.txt")
 hello_outputs = util.get_list_from_file("data/hello/hello_output.txt")
 
@@ -42,7 +41,6 @@ def get_response_text(user, message_text):
     # Normalize message_text
     message_text = unidecode(message_text).lower()
     response_text = None
-
 
     # Food
     if check_string_contains_an_element_of_list(message_text, food_inputs):
@@ -88,21 +86,26 @@ def handle_hello_message(user, message_text):
 
     return response_text
 
+    return
 
 def handle_food_message(user, message_text):
     '''
         - Handle Food Message
         @param user: User sending the message
-        @Param message_text: content of the message
+        @Param message_text: content of the message : "Hôm nay ăn gì? : "
     '''
     name = user["first_name"]
     gender = user["gender"]
     gender_call = "chị" if (gender == "female") else "anh"
+
+    food_keyword = get_food_keyword(message_text)
+    food_list = util.find_elements_by_keyword(food_outputs, food_keyword)
+    food_list = food_list if len(food_list) > 0 else food_outputs
     now = datetime.now()
     response_text = "food"
     food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗\nCông thức nấu ăn: \nhttps://cookpad.com/vn/tim-kiem/{} "
 
-    food = random.choice(food_outputs)
+    food = random.choice(food_list)
 
     response_text = food_str.format(food, gender_call, name, urllib.parse.quote(food))
 
@@ -133,10 +136,24 @@ def handle_not_match_any_message(user):
     gender_call = "chị" if (gender == "female") else "anh"
     now = datetime.now()
     response_text = "None"
-    sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
+    # sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
+    sorry_str_list = [
+f'''
+Con người vốn là khó hiểu {gender_call} {name} nhỉ!
+Mà em chỉ là một con bot ngu ngok mới bước vào thế giới này 😢
+Em sẽ về bảo sư phụ chỉ bảo thêm ạ!
+''',
+f'''
+Xin lỗi {gender_call} {name}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢
+''',
+f'''
+Không biết do con người khó hiểu hay là do em ngu ngok {gender_call} {name} nhỉ?
+Chắc là do em ngu ngok đó 😢
+Đừng rep tn này, cho em trầm cảm 1 tí nhá, hoặc {gender_call} có thể hỏi cái khác ạ, e sẽ giúp {gender_call}
+:"<<
+''']
 
-
-    response_text = sorry_str.format(gender_call, name)
+    response_text = random.choice(sorry_str_list)
 
     return response_text
 
@@ -198,13 +215,19 @@ Nay nghe bài này đi {} {} ơi:
 ️🎶️🎶️🎶
 Link spotify nè: {}'''
 
-    response_text = music_str.format(gender_call, name, playlist_items[num]['name'], playlist_items[num]['artists'], playlist_items[num]['spotify'])
+    response_text = music_str.format(gender_call, name, playlist_items[num]['name'], playlist_items[num]['artists'],
+                                     playlist_items[num]['spotify'])
     return response_text
 
 
 def check_string_contains_an_element_of_list(str, list):
     # print(any(element in str for element in list))
     return any(element in str for element in list)
+
+
+def get_food_keyword(message_text):
+    element_list = message_text.split(':')
+    return element_list[1].strip() if len(element_list) > 1 else ''
 
 
 def get_all_data(self):
