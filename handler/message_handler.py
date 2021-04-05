@@ -61,7 +61,7 @@ def get_response_text(user, message_text):
     elif check_string_contains_an_element_of_list(message_text, hello_inputs):
         response_text = handle_hello_message(user, message_text)
     else:
-        response_text = handle_not_match_any_message(user)
+        response_text = handle_not_match_any_message(user, message_text)
     print(">> response_text : " + response_text)
     # Stop typing
     bot_handler.typing(recipient_id, 0)
@@ -125,7 +125,7 @@ def handle_quote_message(user, message_text):
     return response_text
 
 
-def handle_not_match_any_message(user):
+def handle_not_match_any_message(user, message_text):
     '''
         - Handle Not Match Any Message
         @param user: User sending the message
@@ -136,8 +136,13 @@ def handle_not_match_any_message(user):
     gender_call = "chị" if (gender == "female") else "anh"
     now = datetime.now()
     response_text = "None"
-    # sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
-    sorry_str_list = [
+    sorry_str_list = []
+    love_str_list = ["yeu"]
+    if check_string_contains_an_element_of_list(message_text, love_str_list):
+        response_text = f"yeuuu {gender_call} {name} <3"
+    else:
+        # sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
+        sorry_str_list = [
 f'''
 Con người vốn là khó hiểu {gender_call} {name} nhỉ!
 Mà em chỉ là một con bot ngu ngok mới bước vào thế giới này 😢
@@ -152,11 +157,12 @@ Chắc là do em ngu ngok đó 😢
 Đừng rep tn này, cho em trầm cảm 1 tí nhá, hoặc {gender_call} có thể hỏi cái khác ạ, e sẽ giúp {gender_call}
 :"<<
 '''
-":(",
-".",
-"Bot emmm đang trầm cảm ..."]
+''':(''',
+'''.''',
+'''Bot emmm đang trầm cảm ...''',
+'''Em không hiểu?''']
 
-    response_text = random.choice(sorry_str_list)
+        response_text = random.choice(sorry_str_list)
 
     return response_text
 
