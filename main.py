@@ -19,7 +19,7 @@ user = {
 # create_schedule_task_multithreading()
 
 
-message_text = 'dsajdilsa'
+message_text = 'food: bí'
 
 response_text = message_handler.get_response_text(user, message_text)
 # print(response_text)

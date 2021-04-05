@@ -151,7 +151,10 @@ Không biết do con người khó hiểu hay là do em ngu ngok {gender_call} {
 Chắc là do em ngu ngok đó 😢
 Đừng rep tn này, cho em trầm cảm 1 tí nhá, hoặc {gender_call} có thể hỏi cái khác ạ, e sẽ giúp {gender_call}
 :"<<
-''']
+'''
+":(",
+".",
+"Bot emmm đang trầm cảm ..."]
 
     response_text = random.choice(sorry_str_list)
 
