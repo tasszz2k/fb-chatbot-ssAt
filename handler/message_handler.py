@@ -139,7 +139,7 @@ def handle_not_match_any_message(user, message_text):
     sorry_str_list = []
     love_str_list = ["yeu"]
     if check_string_contains_an_element_of_list(message_text, love_str_list):
-        response_text = f"yeuuu {gender_call} {name} <3"
+        response_text = f"Tình yêu là thứ gì đó rất khó hiểu {gender_call} {name} ạ :'<<"
     else:
         # sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
         sorry_str_list = [
