@@ -8,4 +8,6 @@ nghe bai gi
 dang buon
 dang vui
 buon thi phai lam sao
+buon qua
+vui qua
 

@@ -16,10 +16,20 @@ user = {
     'gender': 'male'
 }
 
+# '''
+# {
+#     "first_name": "Trangg",
+#     "last_name": "Trangg",
+#     "profile_pic": "https://platform-lookaside.fbsbx.com/platform/profilepic/?psid=3779058915523383&width=1024&ext=1620197548&hash=AeRudLp1sFHrAS6digE",
+#     "gender": "female",
+#     "id": "3779058915523383"
+# }
+# '''
+
 # create_schedule_task_multithreading()
 
 
-message_text = 'yêu em'
+message_text = '13123'
 
 response_text = message_handler.get_response_text(user, message_text)
 # print(response_text)

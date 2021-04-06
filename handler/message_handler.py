@@ -30,6 +30,9 @@ number_outputs = util.get_list_from_file("data/number/number_output.txt")
 music_inputs = util.get_list_from_file("data/music/music_input.txt")
 music_outputs = util.get_list_from_file("data/music/music_output.txt")
 
+smile_inputs = util.get_list_from_file("data/smile/smile_input.txt")
+smile_outputs = util.get_list_from_file("data/smile/smile_output.txt")
+
 
 def get_response_text(user, message_text):
     # Get recipient_id
@@ -57,6 +60,9 @@ def get_response_text(user, message_text):
     # Music
     elif check_string_contains_an_element_of_list(message_text, music_inputs):
         response_text = handle_music_message(user, message_text)
+    # Smile
+    elif check_string_contains_an_element_of_list(message_text, smile_inputs):
+        response_text = handle_smile_message(user, message_text)
     # Hello
     elif check_string_contains_an_element_of_list(message_text, hello_inputs):
         response_text = handle_hello_message(user, message_text)
@@ -87,6 +93,7 @@ def handle_hello_message(user, message_text):
     return response_text
 
     return
+
 
 def handle_food_message(user, message_text):
     '''
@@ -125,6 +132,15 @@ def handle_quote_message(user, message_text):
     return response_text
 
 
+def handle_smile_message(user, message_text):
+    '''
+        - Handle Food Message
+        @param user: User sending the message
+        @Param message_text: content of the message : "Hôm nay ăn gì? : "
+    '''
+    return random.choice(smile_outputs)
+
+
 def handle_not_match_any_message(user, message_text):
     '''
         - Handle Not Match Any Message
@@ -143,24 +159,28 @@ def handle_not_match_any_message(user, message_text):
     else:
         # sorry_str = "Xin lỗi {} {}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢"
         sorry_str_list = [
-f'''
+            f'''
 Con người vốn là khó hiểu {gender_call} {name} nhỉ!
 Mà em chỉ là một con bot ngu ngok mới bước vào thế giới này 😢
 Em sẽ về bảo sư phụ chỉ bảo thêm ạ!
 ''',
-f'''
+            f'''
 Xin lỗi {gender_call} {name}, em học bài chưa kĩ, em sẽ về bảo sư phụ dạy thêm ạ!\n😢
 ''',
-f'''
+            f'''
 Không biết do con người khó hiểu hay là do em ngu ngok {gender_call} {name} nhỉ?
 Chắc là do em ngu ngok đó 😢
 Đừng rep tn này, cho em trầm cảm 1 tí nhá, hoặc {gender_call} có thể hỏi cái khác ạ, e sẽ giúp {gender_call}
 :"<<
-'''
-''':(''',
-'''.''',
-'''Bot emmm đang trầm cảm ...''',
-'''Em không hiểu?''']
+''',
+            f''':(''',
+            f'''.''',
+            f'''Bot emmm đang trầm cảm ...''',
+            f'''Em không hiểu?''',
+            f'''😊''',
+            f'''😶''',
+            f'''🤔''',
+        ]
 
         response_text = random.choice(sorry_str_list)
 

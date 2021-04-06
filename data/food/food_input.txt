@@ -6,3 +6,9 @@ food
 mon gi
 an com
 mon de nau
+chi doi
+doi
+an chua
+an toi
+an trua
+de nau
