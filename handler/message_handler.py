@@ -104,10 +104,11 @@ def handle_food_message(user, message_text):
     name = user["first_name"]
     gender = user["gender"]
     gender_call = "chị" if (gender == "female") else "anh"
-
+    food_list = food_outputs
     food_keyword = get_food_keyword(message_text)
-    food_list = util.find_elements_by_keyword(food_outputs, food_keyword)
-    food_list = food_list if len(food_list) > 0 else food_outputs
+    if food_keyword != '':
+        food_list = util.find_elements_by_keyword(food_outputs, food_keyword)
+        food_list = food_list if len(food_list) > 0 else food_outputs
     now = datetime.now()
     response_text = "food"
     food_str = "Bữa nay ăn '{}' là hợp lý {} {} ạ!\n🥗🥗🥗\nCông thức nấu ăn: \nhttps://cookpad.com/vn/tim-kiem/{} "
