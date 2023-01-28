@@ -7,13 +7,13 @@ from config import config
 from handler import bot_handler
 from expiringdict import ExpiringDict
 
-MAX_LENGTH_OF_CHAT_HISTORY = 4
+MAX_LENGTH_OF_CHAT_HISTORY = 6
 
 openai.api_key = config.OPENAI_API_KEY
 OPEN_AI_MODEL = config.OPEN_AI_MODEL
 
 # create the map(user_id, chat_history_as_list) with a timeout of 1h
-chat_history_map = ExpiringDict(max_len=50, max_age_seconds=60 * 60)
+chat_history_map = ExpiringDict(max_len=50, max_age_seconds=60 * 5)
 
 
 def get_response_text(user, message_text):
