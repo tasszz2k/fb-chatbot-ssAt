@@ -61,9 +61,9 @@ def test():
     return "Hi, I'm ssAt!"
 
 
-@app.route('/test', methods=['GET'])
-def test():
-    return "Hi, I'm ssAt!"
+# @app.route('/test', methods=['GET'])
+# def test():
+#     return "Hi, I'm ssAt!"
 
 
 # Add description here about this if statement.
