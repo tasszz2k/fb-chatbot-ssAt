@@ -31,7 +31,7 @@ def get_response_text(user, message_text):
     # replace all words "tôi" with "em", "bạn" with "anh" if gender is 'male', otherwise replace with "chị"
     you = "anh" if user['gender'] == 'male' else "chị"
 
-    response_text = response_text.replace("tôi", "em").replace("bạn", you)
+    response_text = response_text.replace("tôi", "em").replace("Tôi", "Em").replace("bạn", you).replace("Bạn", you)
 
     print(">> response_text : " + response_text)
     # Stop typing
