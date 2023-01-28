@@ -28,6 +28,11 @@ def get_response_text(user, message_text):
 
     # Use Chat GPT to generate response text
     response_text = handle_message(user, message_text)
+    # replace all words "tôi" with "em", "bạn" with "anh" if gender is 'male', otherwise replace with "chị"
+    you = "anh" if user['gender'] == 'male' else "chị"
+
+    response_text = response_text.replace("tôi", "em").replace("bạn", you)
+
     print(">> response_text : " + response_text)
     # Stop typing
     bot_handler.typing(recipient_id, 0)

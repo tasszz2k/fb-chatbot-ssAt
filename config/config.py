@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # OpenAI
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPEN_AI_MODEL = "text-curie-001"
+OPEN_AI_MODEL = "text-davinci-003"
 
 # Spotify
 SPOTIFY_USERNAME = 'dhyxi2nynfg8ix3ddcmmhhl6u'

@@ -2,10 +2,6 @@ from flask import Flask, request
 
 import handler.bot_handler as bot_handler
 import handler.message_handler_v2 as message_handler
-from handler.scheduler import create_schedule_task_multithreading
-
-# Create new schedule task to send message
-create_schedule_task_multithreading()
 
 app = Flask(__name__)  # Initializing our Flask application
 
@@ -61,6 +57,11 @@ def log_chat_histories():
 
 
 @app.route('/', methods=['GET'])
+def test():
+    return "Hi, I'm ssAt!"
+
+
+@app.route('/test', methods=['GET'])
 def test():
     return "Hi, I'm ssAt!"
 

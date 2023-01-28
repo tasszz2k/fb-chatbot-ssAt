@@ -23,10 +23,9 @@ user_2 = {
 
 
 
-message_handler.handle_message(user_1, "trời lạnh nên ăn gì")
-message_handler.handle_message(user_1, "có nên ăn kem vào mùa đông không?")
-message_handler.handle_message(user_1, "ăn kem vị gì ngon nhất")
-message_handler.handle_message(user_1, "ngoài kem ra có món gì ngon không")
+message_handler.get_response_text(user_1, "xin chào")
+message_handler.get_response_text(user_1, "bạn có biết tiếng Việt không?")
+message_handler.get_response_text(user_1, "code bug thì phải làm sao?")
 
 
 
