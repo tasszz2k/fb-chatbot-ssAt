@@ -2,12 +2,15 @@ import json
 
 from pymessenger.bot import Bot
 from flask import Flask, request
+
 import config.util as util
 import requests
 import time
 
-ACCESS_TOKEN = open("config/access_token.txt", "r").read()
-VERIFY_TOKEN = 'TASS_VERIFY_TOKEN'
+from config import config
+
+ACCESS_TOKEN = config.FACEBOOK_ACCESS_TOKEN
+VERIFY_TOKEN = config.FACEBOOK_VERIFY_TOKEN
 bot = Bot(ACCESS_TOKEN)
 
 

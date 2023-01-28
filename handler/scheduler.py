@@ -1,11 +1,9 @@
-import functools
+import threading
+import time
 from datetime import datetime
 
 import pytz
 import schedule
-import time
-from threading import Thread
-import threading
 
 from handler.bot_handler import send_message
 from handler.message_handler import handle_quote_message

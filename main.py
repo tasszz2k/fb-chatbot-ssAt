@@ -1,7 +1,7 @@
 import time
 
 from unidecode import unidecode
-import handler.message_handler as message_handler
+import handler.message_handler_v2 as message_handler
 import handler.bot_handler as bot_handler
 from handler.scheduler import create_schedule_task_multithreading
 
@@ -29,9 +29,11 @@ user = {
 # create_schedule_task_multithreading()
 
 
-message_text = 'food'
+message_text = '''lợi ích của việc ăn rau xanh'''
 
 response_text = message_handler.get_response_text(user, message_text)
+bot_handler.send_message(user["id"], response_text)
+
 # print(response_text)
 # for i in range(100):
 #     print(i)

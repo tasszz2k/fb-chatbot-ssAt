@@ -1,6 +1,3 @@
-import json
-import re
-
 import requests
 from unidecode import unidecode
 
