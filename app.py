@@ -61,7 +61,7 @@ def log_chat_histories():
 
 
 @app.route('/', methods=['GET'])
-def log_chat_histories():
+def test():
     return "Hi, I'm ssAt!"
 
 
