@@ -39,7 +39,8 @@ def receive_message():
                     old_message = chat_histories.get(recipient_id)
                     if old_message == receive_message:
                         print("Old message: " + old_message)
-                        return
+                        return "Message Processed"
+
                     chat_histories[recipient_id] = receive_message
 
                     if receive_message:
