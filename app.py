@@ -4,7 +4,6 @@ import handler.bot_handler as bot_handler
 import handler.message_handler_v2 as message_handler
 from handler.scheduler import create_schedule_task_multithreading
 
-
 # Create new schedule task to send message
 create_schedule_task_multithreading()
 
@@ -52,12 +51,14 @@ def receive_message():
                         # send_message(recipient_id, response_text)
     return "Message Processed"
 
+
 @app.route('/logs', methods=['GET'])
 def log_chat_histories():
     logs = ">> Chat Histories: \n"
     for key, value in message_handler.chat_history_map.items():
         logs += ">>> " + key + ": " + value + "\n"
     return logs
+
 
 @app.route('/', methods=['GET'])
 def log_chat_histories():
