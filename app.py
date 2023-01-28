@@ -5,9 +5,11 @@ import handler.message_handler_v2 as message_handler
 
 app = Flask(__name__)  # Initializing our Flask application
 
+chat_histories = {}
 
 # Importing standard route and two request types: GET and POST.
 # We will receive messages that Facebook sends our bot at this endpoint
+
 @app.route('/webhook', methods=['GET', 'POST'])
 def receive_message():
     if request.method == 'GET':
@@ -21,7 +23,7 @@ def receive_message():
     else:
         # get whatever message a user sent the bot
         output = request.get_json()
-        print(output)
+        # print(output)
         for event in output['entry']:
             messaging = event['messaging']
             for message in messaging:
@@ -34,6 +36,12 @@ def receive_message():
                     # ----------------
                     # if user send us any message is text
                     receive_message = message['message'].get('text')
+                    old_message = chat_histories.get(recipient_id)
+                    if old_message == receive_message:
+                        print("Old message: " + old_message)
+                        return
+                    chat_histories[recipient_id] = receive_message
+
                     if receive_message:
                         # response text here
                         response_text = message_handler.get_response_text(user, receive_message)
