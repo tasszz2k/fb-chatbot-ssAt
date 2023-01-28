@@ -13,7 +13,7 @@ app = Flask(__name__)  # Initializing our Flask application
 
 # Importing standard route and two request types: GET and POST.
 # We will receive messages that Facebook sends our bot at this endpoint
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/webhook', methods=['GET', 'POST'])
 def receive_message():
     if request.method == 'GET':
         # Before allowing people to message your bot Facebook has implemented a verify token
@@ -51,6 +51,17 @@ def receive_message():
                         # response_text = MessageHandler.get_response_text(user, receive_message)
                         # send_message(recipient_id, response_text)
     return "Message Processed"
+
+@app.route('/logs', methods=['GET'])
+def log_chat_histories():
+    logs = ">> Chat Histories: \n"
+    for key, value in message_handler.chat_history_map.items():
+        logs += ">>> " + key + ": " + value + "\n"
+    return logs
+
+@app.route('/', methods=['GET'])
+def log_chat_histories():
+    return "Hi, I'm ssAt!"
 
 
 # Add description here about this if statement.
