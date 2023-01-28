@@ -4,6 +4,7 @@ import handler.bot_handler as bot_handler
 import handler.message_handler_v2 as message_handler
 from handler.scheduler import create_schedule_task_multithreading
 
+
 # Create new schedule task to send message
 create_schedule_task_multithreading()
 

@@ -24,7 +24,7 @@ def get_response_text(user, message_text):
     bot_handler.typing(recipient_id, 1)
 
     # Normalize message_text
-    message_text = unidecode(message_text).lower()
+    message_text = message_text.lower()
 
     # Use Chat GPT to generate response text
     response_text = handle_message(user, message_text)
@@ -59,7 +59,7 @@ def handle_message(user, message_text):
 
     # convert chat_history_as_list to string with seperated by \n
     chat_history = "\n".join(chat_history_as_list)
-    chat_history += "A: "
+    chat_history += "\nA: "
     # print(chat_history)
 
     response = openai.Completion.create(
