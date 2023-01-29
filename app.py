@@ -38,14 +38,15 @@ def receive_message():
                     # ----------------
                     # if user send us any message is text
                     receive_message = message['message'].get('text')
-                    is_continue_process = is_continue_process_message(recipient_id, receive_message)
-                    if not is_continue_process:
-                        return "Message Processed"
-
-                    chat_histories[recipient_id] = receive_message
 
                     if receive_message:
                         # response text here
+                        is_continue_process = is_continue_process_message(recipient_id, receive_message)
+                        if not is_continue_process:
+                            return "Message Processed"
+
+                        chat_histories[recipient_id] = receive_message
+
                         response_text = message_handler.get_response_text(user, receive_message)
                         bot_handler.send_message(recipient_id, response_text)
 
