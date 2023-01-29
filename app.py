@@ -2,10 +2,12 @@ from flask import Flask, request
 
 import handler.bot_handler as bot_handler
 import handler.message_handler_v2 as message_handler
+import config.util as util
 
 app = Flask(__name__)  # Initializing our Flask application
 
 chat_histories = {}
+
 
 # Importing standard route and two request types: GET and POST.
 # We will receive messages that Facebook sends our bot at this endpoint
@@ -36,9 +38,8 @@ def receive_message():
                     # ----------------
                     # if user send us any message is text
                     receive_message = message['message'].get('text')
-                    old_message = chat_histories.get(recipient_id)
-                    if old_message == receive_message:
-                        print("Old message: " + old_message)
+                    is_continue_process = is_continue_process_message(recipient_id, receive_message)
+                    if not is_continue_process:
                         return "Message Processed"
 
                     chat_histories[recipient_id] = receive_message
@@ -56,6 +57,18 @@ def receive_message():
                         # send_message(recipient_id, response_text)
     return "Message Processed"
 
+
+def is_continue_process_message(recipient_id, receive_message):
+    old_message = chat_histories.get(recipient_id)
+    # check if word count of receive message is less than words, then return False
+    if not util.check_word_count(receive_message, 3):
+        return False
+    if old_message == receive_message:
+        return False
+    # check if word start with '!' then return False
+    if receive_message.startswith('!'):
+        return False
+    return True
 
 @app.route('/logs', methods=['GET'])
 def log_chat_histories():
