@@ -7,7 +7,7 @@ from config import config
 from handler import bot_handler
 from expiringdict import ExpiringDict
 
-MAX_LENGTH_OF_CHAT_HISTORY = 6
+MAX_LENGTH_OF_CHAT_HISTORY = 8
 
 openai.api_key = config.OPENAI_API_KEY
 OPEN_AI_MODEL = config.OPEN_AI_MODEL
